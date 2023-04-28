@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">10120918Latihan2</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="or">OR</string>
+    <string name="connect_with_facebook">Connect with facebook</string>
+
+</resources>
