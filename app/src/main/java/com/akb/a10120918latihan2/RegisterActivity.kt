@@ -20,7 +20,7 @@ class RegisterActivity : AppCompatActivity() {
 
         val almostThere = findViewById<MaterialButton>(R.id.btnRegister)
         almostThere.setOnClickListener {
-            startActivity(Intent(this, VerifyActivity::class.java))
+            startActivity(Intent(this, AlmostThereActivity::class.java))
         }
     }
 }
