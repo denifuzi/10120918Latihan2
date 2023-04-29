@@ -8,11 +8,14 @@
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_110dp"
         android:src="@drawable/ic_welcome_logo"
+        app:layout_constraintBottom_toTopOf="@+id/etUsername"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
         android:id="@+id/etUsername"
@@ -26,9 +29,11 @@
         android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -42,9 +47,11 @@
         android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
@@ -57,9 +64,11 @@
         android:text="@string/login"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/tvOr"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:strokeColor="@color/white"
         app:strokeWidth="@dimen/_1dp" />
 
@@ -69,10 +78,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_16dp"
         android:text="@string/or"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnFb"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        android:textColor="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnFb"
@@ -82,17 +93,32 @@
         android:layout_marginTop="@dimen/_16dp"
         android:layout_marginEnd="@dimen/_16dp"
         android:backgroundTint="@color/picton_blue"
-        android:text="@string/connect_with_facebook"
-        android:textAllCaps="true"
-        app:icon="@drawable/ic_welcome_fb_login"
-        app:iconGravity="textStart"
         android:insetTop="@dimen/_0dp"
         android:insetBottom="@dimen/_0dp"
+        android:text="@string/connect_with_facebook"
+        android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        app:icon="@drawable/ic_welcome_fb_login"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/tvNotRegister"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvOr"
+        app:layout_constraintTop_toBottomOf="@+id/tvOr"
         app:strokeColor="@color/white"
         app:strokeWidth="@dimen/_1dp" />
+
+    <TextView
+        android:id="@+id/tvNotRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFb" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,19 +1,322 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:id="@+id/vheaderProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:background="@drawable/ic_header_profile"
+        app:layout_constraintDimensionRatio="5:2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIcon"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_side_menu"
+        android:drawableEnd="@drawable/ic_notification"
+        android:drawablePadding="@dimen/_24dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_12dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vheaderProfile" />
+
+    <View
+        android:id="@+id/vShadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/vheaderProfile" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="@dimen/_110dp"
+        android:layout_height="@dimen/_110dp"
+        android:padding="@dimen/_4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_profile"
+        app:layout_constraintBottom_toBottomOf="@id/vheaderProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vheaderProfile"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_4dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_8dp"
+        android:text="@string/name_profile"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Headline6"
+        android:textColor="@color/picton_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+    <TextView
+        android:id="@+id/tvBlood"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/blood_type"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        android:textColor="@color/black_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <View
+        android:id="@+id/vFirstLine"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/tvBlood"
+        app:layout_constraintStart_toStartOf="@id/tvBlood"
+        app:layout_constraintTop_toBottomOf="@id/tvBlood" />
+
+    <TextView
+        android:id="@+id/tv100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:text="@string/number_100"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        android:textColor="@color/picton_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vFirstLine" />
+
+    <TextView
+        android:id="@+id/tvBloodReceived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/blood_received"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black_default"
+        app:layout_constraintEnd_toEndOf="@id/tv100"
+        app:layout_constraintStart_toStartOf="@id/tv100"
+        app:layout_constraintTop_toBottomOf="@id/tv100" />
+
+    <TextView
+        android:id="@+id/tv75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:text="@string/number_75"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        android:textColor="@color/picton_blue"
+        app:layout_constraintEnd_toStartOf="@id/tv100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vFirstLine" />
+
+    <TextView
+        android:id="@+id/tvBloodGive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/blood_give"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black_default"
+        app:layout_constraintEnd_toEndOf="@id/tv75"
+        app:layout_constraintStart_toStartOf="@id/tv75"
+        app:layout_constraintTop_toBottomOf="@id/tv75" />
+
+    <TextView
+        android:id="@+id/tv330"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:text="@string/number_330"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        android:textColor="@color/picton_blue"
+        app:layout_constraintStart_toEndOf="@id/tv100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vFirstLine" />
+
+    <TextView
+        android:id="@+id/tvThanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/thanks"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black_default"
+        app:layout_constraintEnd_toEndOf="@id/tv330"
+        app:layout_constraintStart_toStartOf="@id/tv330"
+        app:layout_constraintTop_toBottomOf="@id/tv330" />
+
+    <View
+        android:id="@+id/vSecLine"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBloodReceived" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"/>
+
+    <ImageView
+        android:id="@+id/ivSearch"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/vSecLine"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_search_donor"
+        android:layout_marginTop="@dimen/_16dp"/>
+
+    <TextView
+        android:id="@+id/tvSearchDonor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:text="@string/searchdonor"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/ivSearch"
+        app:layout_constraintStart_toStartOf="@id/ivSearch"
+        app:layout_constraintTop_toBottomOf="@id/ivSearch" />
+
+    <TextView
+        android:id="@+id/tvSecSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/search_donor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black_default"
+        app:layout_constraintEnd_toEndOf="@id/ivSearch"
+        app:layout_constraintStart_toStartOf="@id/ivSearch"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchDonor" />
+
+    <ImageView
+        android:id="@+id/ivBloodNeed"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/vSecLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_blood_needed"
+        android:layout_marginTop="@dimen/_16dp"/>
+
+    <TextView
+        android:id="@+id/tvBloodNeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:text="@string/bloodneeded"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/ivBloodNeed"
+        app:layout_constraintStart_toStartOf="@id/ivBloodNeed"
+        app:layout_constraintTop_toBottomOf="@id/ivBloodNeed" />
+
+    <TextView
+        android:id="@+id/tv4UserNeedBlood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/userneed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black_default"
+        app:layout_constraintEnd_toEndOf="@id/ivBloodNeed"
+        app:layout_constraintStart_toStartOf="@id/ivBloodNeed"
+        app:layout_constraintTop_toBottomOf="@id/tvBloodNeed" />
+
+    <ImageView
+        android:id="@+id/ivMessage"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvSecSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_message"
+        android:layout_marginTop="@dimen/_16dp"/>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:text="@string/message"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/ivMessage"
+        app:layout_constraintStart_toStartOf="@id/ivMessage"
+        app:layout_constraintTop_toBottomOf="@id/ivMessage" />
+
+    <TextView
+        android:id="@+id/tvNewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/new_message"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black_default"
+        app:layout_constraintEnd_toEndOf="@id/ivMessage"
+        app:layout_constraintStart_toStartOf="@id/ivMessage"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+    <ImageView
+        android:id="@+id/ivDonorHistory"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv4UserNeedBlood"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_donor_history"
+        android:layout_marginTop="@dimen/_16dp"/>
+
+    <TextView
+        android:id="@+id/tvDonorHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:text="@string/donor_history"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/ivDonorHistory"
+        app:layout_constraintStart_toStartOf="@id/ivDonorHistory"
+        app:layout_constraintTop_toBottomOf="@id/ivDonorHistory" />
+
+    <TextView
+        android:id="@+id/tv5Gives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/gives"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black_default"
+        app:layout_constraintEnd_toEndOf="@id/ivDonorHistory"
+        app:layout_constraintStart_toStartOf="@id/ivDonorHistory"
+        app:layout_constraintTop_toBottomOf="@id/tvDonorHistory" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

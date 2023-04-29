@@ -23,6 +23,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".AlmostThereActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VerifyActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -5,5 +5,72 @@
     <string name="login">login</string>
     <string name="or">OR</string>
     <string name="connect_with_facebook">Connect with facebook</string>
+    <string name="register">doesn\'t have account ? <b>Register</b></string>
+    <string name="hRegister">Register</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="retypepassword">Retype Password</string>
+    <string name="personal">Personal</string>
+    <string name="organization">Organization</string>
+    <string name="home_addres">Home address</string>
+    <string name="default_location">Default Location</string>
+    <string name="agreement">Agree with Term and Condition</string>
+    <string name="btn_register">Register</string>
+    <string name="name_profile">Dennie Fuzi Alviyanies</string>
+    <string name="blood_type">Blood Type : B</string>
+    <string name="number_100">100</string>
+    <string name="blood_recoved">Blood Recoved</string>
+    <string name="blood_give">Blood Give</string>
+    <string name="number_75">75</string>
+    <string name="thanks">Thanks</string>
+    <string name="number_330">330</string>
+    <string name="blood_received">Blood Received</string>
+    <string name="searchdonor">Search Donor</string>
+    <string name="search_donor">Search Donor Near You</string>
+    <string name="bloodneeded">Blood Needed</string>
+    <string name="userneed">4 Users Need Blood</string>
+    <string name="new_message">5 New Messages</string>
+    <string name="message">Message</string>
+    <string name="donor_history">Donor History</string>
+    <string name="gives">5 Gives, 2 Received</string>
+    <string name="almost_there">Almost There</string>
+    <string name="thankyou">Thank you for registering with us. One more\nstep, you need to check your email\nto activate your account</string>
+    <string name="verify">Verify</string>
+    <string name="verify2">Verify your Account</string>
+    <string name="send">We have send verification code to your email</string>
+    <string name="verifyInput">enter verification here..</string>
+    <string name="sendmsg">Send</string>
+    <string name="verifyResend">Doesn\'t get the code ? <b>Resend</b></string>
+
+    <string-array name="blood_type">
+        <item>Blood Type</item>
+        <item>O</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+    </string-array>
+
+    <string-array name="reshus">
+        <item>Reshus</item>
+        <item>Positive</item>
+        <item>Negative</item>
+    </string-array>
+
+    <string-array name="job_titles">
+        <item>Job</item>
+        <item>Accountant</item>
+        <item>Engineer</item>
+        <item>Software Developer</item>
+        <item>Teacher</item>
+        <item>Doctor</item>
+        <item>Nurse</item>
+        <item>Lawyer</item>
+        <item>Marketing Manager</item>
+        <item>Human Resources Manager</item>
+        <item>Operations Manager</item>
+        <item>Customer Service Representative</item>
+    </string-array>
 
 </resources>
